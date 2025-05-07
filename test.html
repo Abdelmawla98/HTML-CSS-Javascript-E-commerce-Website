@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 500vw;
+            height: 100vh;
+            background: gray;
+            display: flex;
+            transition: all .3s linear;
+        }
+        .container div{
+            width: 100vw;
+            height: 80vh;
+            position: relative;
+        }
+        .container .one{
+            background: green;
+        }
+        .container .two{
+            background: red;
+        }
+        .container .three{
+            background: blanchedalmond;
+        }
+        .container .four{
+            background: magenta;
+        }
+        .container .five{
+            background: aquamarine;
+        }
+        .container div button{
+            position: absolute;
+            bottom: -15%;
+            padding: 10px 15px;
+            font-size: 24px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .container div .previous {
+            left: 5%;
+        }
+        .container div .next {
+            right: 5%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="one">
+            <button class="next">Next</button>
+            <button class="previous">Previous</button>
+        </div>
+        <div class="two">
+            <button class="next">Next</button>
+            <button class="previous">Previous</button>
+        </div>
+        <div class="three">
+            <button class="next">Next</button>
+            <button class="previous">Previous</button>
+        </div>
+        <div class="four">
+            <button class="next">Next</button>
+            <button class="previous">Previous</button>
+        </div>
+        <div class="five">
+            <button class="next">Next</button>
+            <button class="previous">Previous</button>
+        </div>
+    </div>
+    <script>
+        const cont = document.querySelector(".container");
+        
+        const next = document.querySelectorAll(".next");
+        const previous = document.querySelectorAll(".previous");
+        
+        let counter = 0;
+
+        cont.addEventListener("click", (e)=>{
+            if(e.target.className === "next")
+            counter= counter - 100;
+            else if (e.target.className === "previous")
+            counter= counter + 100;
+            cont.style.transform = `translateX(${counter}vw)`;
+            if(counter > 0 || counter < -400){
+                counter = 0;
+                cont.style.transform = `translateX(${counter}vw)`;
+            }
+        })
+        
+    </script>
+</body>
+</html>

@@ -81,11 +81,13 @@ nav{
 }
 .slider{
     background: url(img/pexels-pixabay-268966.jpg);
-   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 73%); */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 73%);
+    overflow: hidden;
 }
 .sliderWrapper{
     display: flex;
-    width: 500vw; 
+    width: 500vw;
+    transition: all 1s ease-in-out;
 }
 .slider .sliderWrapper .sliderItem{
     width: 100vw;
@@ -95,10 +97,6 @@ nav{
     position: relative;
 }.slider .sliderWrapper .sliderItem .sliderImg{
     z-index: 1;
-}
-.slider .sliderWrapper .sliderItem .sliderImg{
-    position: absolute;
-    z-index: 2;
 }
 .slider .sliderWrapper .sliderItem .slideBg{
     width: 750px;
@@ -179,4 +177,33 @@ nav{
     background: white;
     border: 1px solid white;
     color: black;
+}
+.features{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.features .feature .featureIcon{
+    width: 50px;
+    height: 50px;
+}
+.features .feature .featureTitle{
+    font-size: 22px;
+    font-weight: 600;
+    margin: 20px;
+}
+.features .feature .featureDesc{
+    color: gray;
+}
+.product{
+    height: 100vh;
+    background: whitesmoke;
+    position: relative;
 }
