@@ -94,11 +94,17 @@ nav{
     align-items: center;
     position: relative;
 }
+.slider .sliderWrapper .sliderItem .sliderImg{
+    position: absolute;
+    z-index: 2;
+}
 .slider .sliderWrapper .sliderItem .slideBg{
     width: 750px;
     height: 750px;
     border-radius: 50%;
     background: yellow;
+    position: absolute;
+    
 }
 .slider .sliderWrapper .sliderItem .sliderTitle{
     text-transform: uppercase;
