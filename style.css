@@ -93,6 +93,8 @@ nav{
     justify-content: center;
     align-items: center;
     position: relative;
+}.slider .sliderWrapper .sliderItem .sliderImg{
+    z-index: 1;
 }
 .slider .sliderWrapper .sliderItem .sliderImg{
     position: absolute;
@@ -102,9 +104,24 @@ nav{
     width: 750px;
     height: 750px;
     border-radius: 50%;
+    position: absolute;
+}
+.slider .sliderWrapper .sliderItem:first-child .slideBg{
     background: yellow;
     position: absolute;
     
+}
+.slider .sliderWrapper .sliderItem:nth-child(2) .slideBg{
+    background: lightgreen;
+}
+.slider .sliderWrapper .sliderItem:nth-child(3) .slideBg{
+    background: orchid;
+}
+.slider .sliderWrapper .sliderItem:nth-child(4) .slideBg{
+    background: lightskyblue;
+}
+.slider .sliderWrapper .sliderItem:last-child .slideBg{
+    background: olivedrab;
 }
 .slider .sliderWrapper .sliderItem .sliderTitle{
     text-transform: uppercase;
@@ -115,6 +132,7 @@ nav{
     font-size: 60px;
     font-weight: 900;
     text-align: center;
+    z-index: 1;
 }
 .slider .sliderWrapper .sliderItem .sliderPrice{
     text-transform: uppercase;
@@ -125,4 +143,40 @@ nav{
     font-size: 60px;
     font-weight: 600;
     text-align: center;
+}
+.slider .sliderWrapper .sliderItem:first-child .sliderPrice{
+    color: yellow;
+}
+.slider .sliderWrapper .sliderItem:nth-child(2) .sliderPrice{
+    color: lightgreen;
+}
+.slider .sliderWrapper .sliderItem:nth-child(3) .sliderPrice{
+    color: orchid;
+}
+.slider .sliderWrapper .sliderItem:nth-child(4) .sliderPrice{
+    color: lightskyblue;
+}
+.slider .sliderWrapper .sliderItem:last-child .sliderPrice{
+    color: olivedrab;
+}
+.slider .sliderWrapper .sliderItem .buyButton{
+    text-transform: uppercase;
+    color: white;
+    background: black;
+    border: 1px solid gray;
+    padding: 5px 10px;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    font-size: 30px;
+    font-weight: 900;
+    cursor: pointer;
+    text-align: center;
+    z-index: 1;
+    transition: all .3s linear;
+}
+.slider .sliderWrapper .sliderItem .buyButton:hover{
+    background: white;
+    border: 1px solid white;
+    color: black;
 }
