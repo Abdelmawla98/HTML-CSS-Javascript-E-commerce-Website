@@ -81,7 +81,7 @@ const products = [
 
   let choosenProduct = products[0];
 
-  const currentProductImg = document.querySelector(".productImg");
+  let currentProductImg = document.querySelector(".productImg");
   const currentProductTitle = document.querySelector(".productTitle");
   const currentProductPrice = document.querySelector(".productPrice");
   const currentProductColors = document.querySelectorAll(".color");
@@ -110,7 +110,8 @@ const navBottom = document.querySelector(".navBottom");
     currentProductColors.forEach((el,ind)=>{
         el.addEventListener("click",(ev)=>{
             
-            console.log(wrapper);
+            currentProductImg  = products[choosenProduct.id].colors[ind].img;
+            console.log(choosenProduct.id);
             console.log(ev.target);
         })
     })
