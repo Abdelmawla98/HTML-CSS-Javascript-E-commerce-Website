@@ -7,11 +7,15 @@
             padding: 0;
             box-sizing: border-box;
         }
+        html, body{
+            overflow-x: hidden;
+        }
         .container{
             width: 500vw;
             height: 100vh;
             background: gray;
             display: flex;
+            overflow:hidden;
             transition: all .3s linear;
         }
         .container div{
@@ -41,6 +45,12 @@
             font-size: 24px;
             border-radius: 5px;
             cursor: pointer;
+        }
+        .container div:first-child .previous{
+            display: none;
+        }
+        .container div:first-child .next{
+            right: 50%;
         }
         .container div .previous {
             left: 5%;
